@@ -22,7 +22,7 @@ use sp_consensus_aura::sr25519::AuthorityPair as AuraPair;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> &'static str {
-		"Substrate Node"
+		"Substrate Governance"
 	}
 
 	fn impl_version() -> &'static str {
@@ -74,7 +74,7 @@ pub fn run() -> sc_cli::Result<()> {
 			runner.run_node(
 				service::new_light,
 				service::new_full,
-				node_template_runtime::VERSION
+				substrate_governance_runtime::VERSION
 			)
 		}
 	}

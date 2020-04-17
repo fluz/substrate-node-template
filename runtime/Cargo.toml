@@ -95,12 +95,6 @@ default-features = false
 package = 'frame-system'
 version = '2.0.0-alpha.6'
 
-[dependencies.template]
-default-features = false
-package = 'pallet-template'
-path = '../pallets/template'
-version = '2.0.0-alpha.6'
-
 [dependencies.timestamp]
 default-features = false
 package = 'pallet-timestamp'
@@ -116,12 +110,12 @@ package = 'substrate-wasm-builder-runner'
 version = '1.0.5'
 
 [package]
-authors = ['Anonymous']
+authors = ['Dan Forbes <dan@parity.io>']
 edition = '2018'
-homepage = 'https://substrate.dev'
+homepage = 'https://github.com/danforbes/substrate-node-template'
 license = 'Unlicense'
-name = 'node-template-runtime'
-repository = 'https://github.com/paritytech/substrate/'
+name = 'substrate-governance-runtime'
+repository = 'https://github.com/danforbes/substrate-node-template'
 version = '2.0.0-alpha.6'
 
 [package.metadata.docs.rs]
@@ -154,5 +148,4 @@ std = [
     'system/std',
     'timestamp/std',
     'transaction-payment/std',
-    'template/std',
 ]
