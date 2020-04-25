@@ -27,6 +27,10 @@ default-features = false
 package = 'pallet-grandpa'
 version = '2.0.0-alpha.6'
 
+[dependencies.pallet-utility]
+default-features = false
+version = '2.0.0-alpha.6'
+
 [dependencies.randomness-collective-flip]
 default-features = false
 package = 'pallet-randomness-collective-flip'
@@ -130,6 +134,7 @@ std = [
     'frame-executive/std',
     'frame-support/std',
     'grandpa/std',
+    'pallet-utility/std',
     'randomness-collective-flip/std',
     'serde',
     'sp-api/std',

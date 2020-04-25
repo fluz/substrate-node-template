@@ -17,6 +17,9 @@ futures = '0.3.4'
 log = '0.4.8'
 structopt = '0.3.8'
 
+[dependencies.pallet-utility]
+version = '2.0.0-alpha.6'
+
 [dependencies.substrate-governance-runtime]
 path = '../runtime'
 version = '2.0.0-alpha.6'
@@ -71,6 +74,7 @@ version = '2.0.0-alpha.6'
 
 [dependencies.sp-transaction-pool]
 version = '2.0.0-alpha.6'
+
 [build-dependencies.substrate-build-script-utils]
 version = '2.0.0-alpha.6'
 
