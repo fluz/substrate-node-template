@@ -1641,6 +1641,7 @@ dependencies = [
  "frame-support",
  "frame-system",
  "hex-literal",
+ "pallet-collective",
  "parity-scale-codec",
  "sp-core",
  "sp-io",
