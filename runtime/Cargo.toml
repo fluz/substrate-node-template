@@ -27,6 +27,15 @@ default-features = false
 package = 'pallet-grandpa'
 version = '2.0.0-alpha.6'
 
+[dependencies.init-council]
+default-features = false
+path = '../pallets/init-council'
+version = '1.0.0'
+
+[dependencies.pallet-collective]
+default-features = false
+version = '2.0.0-alpha.6'
+
 [dependencies.pallet-utility]
 default-features = false
 version = '2.0.0-alpha.6'
@@ -134,6 +143,8 @@ std = [
     'frame-executive/std',
     'frame-support/std',
     'grandpa/std',
+    'init-council/std',
+    'pallet-collective/std',
     'pallet-utility/std',
     'randomness-collective-flip/std',
     'serde',

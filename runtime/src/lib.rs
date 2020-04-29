@@ -91,9 +91,9 @@ pub mod opaque {
 pub const VERSION: RuntimeVersion = RuntimeVersion {
 	spec_name: create_runtime_str!("substrate-governance"),
 	impl_name: create_runtime_str!("substrate-governance"),
-	authoring_version: 1,
-	spec_version: 1,
-	impl_version: 1,
+	authoring_version: 2,
+	spec_version: 2,
+	impl_version: 2,
 	apis: RUNTIME_API_VERSIONS,
 };
 
@@ -233,6 +233,19 @@ impl transaction_payment::Trait for Runtime {
 	type FeeMultiplierUpdate = ();
 }
 
+parameter_types! {
+	pub const CouncilMotionDuration: BlockNumber = 5 * DAYS;
+}
+
+impl pallet_collective::Trait<pallet_collective::Instance1> for Runtime {
+	type Origin = Origin;
+	type Proposal = Call;
+	type Event = Event;
+	type MotionDuration = CouncilMotionDuration;
+}
+
+impl init_council::Trait for Runtime { /* migration pallet */ }
+
 impl sudo::Trait for Runtime {
 	type Event = Event;
 	type Call = Call;
@@ -252,6 +265,8 @@ construct_runtime!(
 		Grandpa: grandpa::{Module, Call, Storage, Config, Event},
 		Balances: balances::{Module, Call, Storage, Config<T>, Event<T>},
 		TransactionPayment: transaction_payment::{Module, Storage},
+		Council: pallet_collective::<Instance1>::{Module, Call, Storage, Origin<T>, Event<T>, Config<T>},
+		InitCouncil: init_council::{Module},
 		Sudo: sudo::{Module, Call, Config<T>, Storage, Event<T>},
 	}
 );
