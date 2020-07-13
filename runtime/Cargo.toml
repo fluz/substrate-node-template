@@ -25,7 +25,7 @@ std = [
     'system/std',
     'timestamp/std',
     'transaction-payment/std',
-    'template/std',
+    'poe/std'
 ]
 [dependencies.aura]
 default-features = false
@@ -164,10 +164,10 @@ package = 'frame-system'
 tag = 'v2.0.0-rc4'
 version = '2.0.0-rc4'
 
-[dependencies.template]
+[dependencies.poe]
 default-features = false
-package = 'pallet-template'
-path = '../pallets/template'
+package = 'poe'
+path = '../pallets/poe'
 version = '2.0.0-rc4'
 
 [dependencies.timestamp]
@@ -185,12 +185,12 @@ tag = 'v2.0.0-rc4'
 version = '2.0.0-rc4'
 
 [package]
-authors = ['Substrate DevHub <https://github.com/substrate-developer-hub>']
+authors = ['']
 edition = '2018'
 homepage = 'https://substrate.dev'
 license = 'Unlicense'
-name = 'node-template-runtime'
-repository = 'https://github.com/substrate-developer-hub/substrate-node-template/'
+name = 'poe-node-runtime'
+repository = ''
 version = '2.0.0-rc4'
 [package.metadata.docs.rs]
 targets = ['x86_64-unknown-linux-gnu']
