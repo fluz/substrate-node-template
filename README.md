@@ -109,6 +109,10 @@ A FRAME pallet is compromised of a number of blockchain primitives:
 
 ## Workshop
 
+**_This commit includes the workshop solution! Start the workshop from
+[this commit](https://github.com/danforbes/substrate-node-template/tree/45558b14febb663fecd689279cfb556a454aa236); it
+includes the necessary dependencies, but not the solution._**
+
 This workshop will guide participants through the process of modifying the provided template pallet to add a new error,
 event and dispatchable, and two new storage items. Finally, the [Polkadot JS Apps UI](https://polkadot.js.org/apps), an
 important part of the Substrate ecosystem, will be used to interact with these new capabilities.
